@@ -17,7 +17,7 @@ Install via Composer:
 composer require jemer/string-helper
 ```
 
-## Usage
+## PathHelper & StringBuilder utility
 
 ```php
 
@@ -46,7 +46,6 @@ echo PathHelper::containingDirectory("/var/www/index.php"); // /var/www
 
 
 
--------------------------------------------------------------------------------
 
 use Jemer\StringHelper\StringBuilder;
 
@@ -93,6 +92,31 @@ $stringBuilder->Clear();
 
 
 ```
+
+## Table utility
+
+```php
+use Jemer\StringHelper\Table;
+
+$table = new Table();
+$table->setHeaders(['ID', 'Name', 'Email']);
+$table->addRow(['1', 'John Doe', 'john@example.com']);
+$table->addRow(['2', 'Jane Smith', 'jane@example.com']);
+
+echo $table->render();
+
+
+//outputs: 
++----+------------+----------------------+
+| ID |    Name    |        Email         |
++----+------------+----------------------+
+| 1  |  John Doe  |   john@example.com   |
+| 2  | Jane Smith |   jane@example.com   |
++----+------------+----------------------+
+
+
+```
+
 
 
 ## Running Tests
