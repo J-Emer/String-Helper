@@ -1,11 +1,12 @@
 # String Helper
 
-A lightweight PHP library providing useful string and path helper functions.
+A lightweight PHP library providing useful string, path, and table helper functions.
 
 ## Features
 
 - String manipulation utilities
 - Path handling helpers
+- Table utility
 - Easy to integrate and extend
 - Fully tested with PHPUnit
 
@@ -17,7 +18,7 @@ Install via Composer:
 composer require jemer/string-helper
 ```
 
-## PathHelper & StringBuilder utility
+## PathHelper utility
 
 ```php
 
@@ -44,8 +45,10 @@ echo PathHelper::generatePath(["var", "www", "html"]); // var/www/html (or platf
 // Get the containing directory for a file
 echo PathHelper::containingDirectory("/var/www/index.php"); // /var/www
 
+```
+## String Builder utility
 
-
+```php
 
 use Jemer\StringHelper\StringBuilder;
 
